@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"></link>
+    <link rel="stylesheet" href="style.css"></link>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script type="text/javascript" src="../js_04/assets/scripts.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2">
+          <!-- espacio vacío -->
+        </div>
+        <div class="col-md-8">
+          <div class="login-form">
+            <form>
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="username">username:</label>
+                </div>
+                <div class="col-md-6">
+                  <input id="username" type="text" name="username" onblur="validate()">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="password">password:</label>
+                </div>
+                <div class="col-md-6">
+                  <input id="password" type="password" name="password" onblur="validate()">
+                </div>
+              </div>
+              <div class="row form-status">
+                <p>Invalid input data</p>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <button class="btn btn-primary" type="submit" onclick="window.open('../js_04/components/page1.html')">Login</button>
+                </div>
+                <div class="col-md-6">
+                  <button class="btn btn-default" type="reset">Cancel</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <!-- espacio vacío -->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+          <!-- espacio vacío -->
+        </div>
+        <div class="col-md-8">
+          <div class="jumbotron">
+            <h1>Sample App</h1>
+            <p>This is a HTML + Bootstrap sample app</p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <!-- espacio vacío -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
