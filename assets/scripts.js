@@ -1,6 +1,14 @@
 $(document).ready(function(){
   $('.form-status').hide()
   $('button[type="submit"]').prop('disabled', true);
+  $("#body").attr("value", "");
+  validar()
+  $('#body').blur(function(){
+    validar()
+  })
+  $('#title').blur(function(){
+    validar()
+  })
 });
 
 function validate () {
@@ -9,10 +17,8 @@ function validate () {
   password = $('#password').val()
   if ((username === undefined || username === '')
                   || (password === undefined || password === '')) {
-    $('.form-status').show()
-    $('.form-status').css('color', '#db1325')
+    $('button[type="submit"]').prop('disabled', true)
   } else {
-    $('.form-status').hide()
     $('button[type="submit"]').prop('disabled', false)
   };
 };
@@ -53,4 +59,18 @@ function savePost() {
     console.log(data)
     alert("Error al crear post")
   })
+};
+
+  function validar(){
+    var title, body
+    title = $('#title').val()
+    body = $('#body').val()
+    console.log(title);
+    console.log(body);
+    if ((title === undefined || title === '')
+                    || (body === undefined || body === '')) {
+      $("#enviar").prop('disabled', true)
+    } else {
+      $("#enviar").prop('disabled', false)
+    };
 };
